@@ -19,7 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.healthcard.TestRunner"
     }
 
     buildTypes {
@@ -80,6 +80,9 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.okhttpLoggingInterceptor)
     implementation(libs.kotlinx.serialization.json)
+
+        // For instrumented tests.
+    androidTestImplementation(libs.hilt.android.testing)
 
   }
 

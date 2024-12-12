@@ -24,7 +24,8 @@ class LoginViewModel @Inject constructor(
             delay(2000)
             sharedPrefManager.saveEmail(email)
             sharedPrefManager.setUserLoggedIn(true)
-            _apiState.value = ResponseResult.Success("Login Successful")
+            val email = sharedPrefManager.getEmail()
+            _apiState.value = ResponseResult.Success("Login Successful: $email")
         }
 
     }
